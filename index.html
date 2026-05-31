@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">My Portfolio</a>
+      <nav class="top-nav">
+        <a href="career.html">Career</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="articles.html">Articles</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="landing" class="landing">
+      <div class="parallax">
+        <div class="parallax-layer rellax" data-rellax-speed="-1" style="background-image:linear-gradient(120deg, rgba(255,255,255,0.03), rgba(0,0,0,0.03));"></div>
+        <div class="parallax-layer rellax" data-rellax-speed="-2" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=60'); filter:brightness(.6);"></div>
+      </div>
+
+      <div class="container hero">
+        <div class="hero-content">
+          <h1 class="title">Designing digital products that delight</h1>
+          <p class="subtitle">I build interfaces, write about design, and help teams ship better products.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="career.html">View Career</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden>
+          <img src="https://images.unsplash.com/photo-1531123414780-f8f3f1f17bda?auto=format&fit=crop&w=800&q=60" alt="hero"/>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section overview">
+      <div class="container">
+        <div class="section-header">
+          <h2>Explore the site</h2>
+          <p class="muted">Jump to the main sections to explore career highlights, selected portfolio work, articles, and a short bio.</p>
+        </div>
+        <div class="tile-grid">
+          <a class="tile tile-career" href="career.html">
+            <div class="tile-icon">🧭</div>
+            <h3>Career</h3>
+            <p>Discover the work history, roles, and growth path across multiple design teams and product launches.</p>
+          </a>
+          <a class="tile tile-portfolio" href="portfolio.html">
+            <div class="tile-icon">📁</div>
+            <h3>Portfolio</h3>
+            <p>Browse project case studies, product journeys, and visual work examples from recent initiatives.</p>
+          </a>
+          <a class="tile tile-articles" href="articles.html">
+            <div class="tile-icon">✍️</div>
+            <h3>Articles</h3>
+            <p>Read thoughts on design systems, product strategy, research, and experience design trends.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <section id="quotes" class="section quotes">
+      <div class="container">
+        <div class="section-header">
+          <h2>UX quotes that guide the work</h2>
+          <p class="muted">Inspiration from designers and thinkers who shaped the way we build meaningful experiences.</p>
+        </div>
+        <div class="quote-grid">
+          <div class="quote-card">
+            <p>“Design is not just what it looks like and feels like. Design is how it works.”</p>
+            <span>— Steve Jobs</span>
+          </div>
+          <div class="quote-card">
+            <p>“The details are not the details. They make the design.”</p>
+            <span>— Charles Eames</span>
+          </div>
+          <div class="quote-card">
+            <p>“If you think good design is expensive, you should look at the cost of bad design.”</p>
+            <span>— Ralf Speth</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=60" alt="Profile"/>
+        </div>
+        <div class="about-content">
+          <h2>About</h2>
+          <p>Hello — I'm a product-focused designer who loves crafting delightful experiences. I enjoy writing, mentoring, and designing systems that scale.</p>
+          <ul class="about-list">
+            <li><strong>Location:</strong> Remote / City, Country</li>
+            <li><strong>Interests:</strong> Typographic systems, motion, accessibility</li>
+            <li><strong>Tools:</strong> Figma, Sketch, React, Framer</li>
+          </ul>
+          <a class="btn primary" href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" download>Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <div>
+            <h3>Get in touch</h3>
+            <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+            <p>Phone: +1 (555) 555-5555</p>
+          </div>
+          <div>
+            <h3>Follow</h3>
+            <ul class="social">
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">GitHub</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Portfolio</h3>
+            <ul>
+              <li><a href="#">Project One</a></li>
+              <li><a href="#">Project Two</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 — Demo Portfolio</div>
+  </footer>
+
+  <script src="https://unpkg.com/rellax@1.12.1/rellax.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

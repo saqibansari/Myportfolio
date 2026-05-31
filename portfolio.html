@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">My Portfolio</a>
+      <nav class="top-nav">
+        <a href="career.html">Career</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="articles.html">Articles</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container" >
+      <h2>Portfolio</h2>
+      <p class="muted">Selected projects and case studies.</p>
+
+      <div class="articles-grid">
+        <nav class="articles-nav">
+          <button class="article-tab active" data-target="p1">Brainstorming Platform</button>
+          <button class="article-tab" data-target="p2">Project Two</button>
+          <button class="article-tab" data-target="p3">Project Three</button>
+          <button class="article-tab" data-target="p4">Project Four</button>
+        </nav>
+
+        <div class="articles-content">
+          <article id="p1" class="article active">
+            <h3>Brainstorming a platform to convert docs using prompts</h3>
+            <p>Concept work for a prompt-driven document conversion tool: research, ideation, and visual design for a smarter authoring workflow.</p>
+            <p class="muted">This case study highlights the first portfolio project, including concept boards, UI explorations, and a clean interaction-driven interface.</p>
+            <div class="project-gallery">
+              <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/a14bf1238814347.691c6f8cf38fc.png" alt="Platform concept overview" />
+              <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/fa4937238814347.691c6f8cf32a1.png" alt="Prompt-based workflow" />
+              <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/15fbd6238814347.691c6f8cf4044.png" alt="Document conversion UI" />
+              <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/db9bbc238814347.691c6f8d00f11.png" alt="Dashboard and prompts" />
+              <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b0954c238814347.691c6f8d007eb.png" alt="User flow exploration" />
+              <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/af7516238814347.691c6f8d01ac8.png" alt="Prompt selection screens" />
+              <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8fdd75238814347.691c6f8d02e5d.png" alt="Abstract product concept" />
+              <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/290122238814347.691c6f8d02633.png" alt="Document conversion workflow" />
+              <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/133c68238814347.691c6f8cf2a8f.png" alt="Typography and interface details" />
+            </div>
+            <div class="project-details">
+              <div>
+                <h4>Challenge</h4>
+                <p>Design a platform that turns unstructured documents into structured, actionable outputs using intelligent prompts and minimal manual steps.</p>
+              </div>
+              <div>
+                <h4>Solution</h4>
+                <p>Built a modular experience centered on prompt selection, document preview, and result transformation. The interface emphasizes clarity, feedback, and quick iteration.</p>
+              </div>
+              <div>
+                <h4>Outcome</h4>
+                <p>The concept presents a polished workflow for users to brainstorm, refine, and convert documents into the formats they need without losing context.</p>
+              </div>
+            </div>
+          </article>
+
+          <article id="p2" class="article">
+            <h3>Project Two — Mobile App</h3>
+            <p>Dummy case study: mobile-first experience for onboarding and retention.</p>
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=60" alt="project-2" style="width:100%;border-radius:8px;margin-top:1rem"/>
+          </article>
+
+          <article id="p3" class="article">
+            <h3>Project Three — Design System</h3>
+            <p>Dummy case study: component library and token system for scaling design.</p>
+            <img src="https://images.unsplash.com/photo-1532619187606-2a3b2a0f1b46?auto=format&fit=crop&w=1000&q=60" alt="project-3" style="width:100%;border-radius:8px;margin-top:1rem"/>
+          </article>
+
+          <article id="p4" class="article">
+            <h3>Project Four — Marketing Site</h3>
+            <p>Dummy case study: landing conversion optimization and A/B testing.</p>
+            <img src="https://images.unsplash.com/photo-1505672678657-cc7037095e2c?auto=format&fit=crop&w=1000&q=60" alt="project-4" style="width:100%;border-radius:8px;margin-top:1rem"/>
+          </article>
+        </div>
+      </div>
+    </div>
+  </main>
+
+      <div class="gallery-overlay" aria-hidden="true">
+        <div class="gallery-backdrop"></div>
+        <div class="gallery-panel" style="max-width:1920px;">
+          <button class="gallery-close" aria-label="Close gallery" style="top: -2rem;">×</button>
+          <div class="gallery-viewer">
+            <button class="gallery-nav gallery-prev" aria-label="Previous image">‹</button>
+            <div class="gallery-frame">
+              <img class="gallery-image" src="" alt="Portfolio image" />
+            </div>
+            <button class="gallery-nav gallery-next" aria-label="Next image">›</button>
+          </div>
+          <div class="gallery-strip"></div>
+        </div>
+      </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Articles — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">My Portfolio</a>
+      <nav class="top-nav">
+        <a href="career.html">Career</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="articles.html">Articles</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container articles">
+      <h2>Articles</h2>
+      <div class="articles-grid">
+        <nav class="articles-nav">
+          <button class="article-tab active" data-target="a1">Design Systems</button>
+          <button class="article-tab" data-target="a2">Product Thinking</button>
+          <button class="article-tab" data-target="a3">UX Research</button>
+          <button class="article-tab" data-target="a4">Prototyping</button>
+        </nav>
+        <div class="articles-content">
+          <article id="a1" class="article active">
+            <h3>Design Systems: Building Faster</h3>
+            <p>Dummy article content about design systems and reusable components.</p>
+          </article>
+          <article id="a2" class="article">
+            <h3>Product Thinking: From Idea to Launch</h3>
+            <p>Dummy article about prioritization, discovery and roadmaps.</p>
+          </article>
+          <article id="a3" class="article">
+            <h3>UX Research: Talking to Users</h3>
+            <p>Dummy article covering interview techniques and synthesis.</p>
+          </article>
+          <article id="a4" class="article">
+            <h3>Prototyping: Rapid Validation</h3>
+            <p>Dummy article on prototyping tools and workflows.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 — Demo Portfolio</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
