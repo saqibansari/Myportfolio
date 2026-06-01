@@ -31,6 +31,7 @@
   const galleryBackdrop = galleryOverlay?.querySelector('.gallery-backdrop');
   const galleryItems = Array.from(document.querySelectorAll('.project-gallery img'));
   let activeGalleryIndex = 0;
+  const GALLERY_ENABLED = false; // set to true to enable overlay gallery
 
   const updateGallery = ()=>{
     if(!galleryImage || !galleryStrip) return;
@@ -72,7 +73,7 @@
     }
   };
 
-  if(galleryOverlay && galleryImage && galleryStrip && galleryItems.length){
+  if(GALLERY_ENABLED && galleryOverlay && galleryImage && galleryStrip && galleryItems.length){
     galleryItems.forEach((img, index)=>{
       img.addEventListener('click', ()=> showGalleryAt(index));
     });

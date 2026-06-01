@@ -10,6 +10,9 @@ Open `index.html` in a browser to view the demo portfolio. It includes:
 - About section with image, bio, and PDF resume download
 - Contact info merged into About page (see About > Contact)
 
+The portfolio page now loads all gallery images from the local `portpictures/` folder.
+If you need to rebuild or refresh those images, run `download_portpictures.py` from the repo root.
+
 To run locally, simply open the file in your browser or use a simple static server, for example:
 
 ```bash
