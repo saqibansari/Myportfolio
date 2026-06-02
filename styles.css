@@ -43,7 +43,7 @@ html,body{height:100%;margin:0;background:linear-gradient(180deg,#071021 0%, #0f
 .section.contact .container{padding:4rem 2rem;}
 .section.contact h2{margin-bottom:1rem}
 .section.contact .contact-grid{background:rgba(15,23,36,0.95);padding:2rem;gap:1.5rem;border-radius:24px;box-shadow:0 30px 65px rgba(0,0,0,0.18)}
-.section.contact .contact-grid div{background:rgba(255,255,255,0.03);padding:1.5rem;border-radius:18px;border:1px solid rgba(255,255,255,0.08)}
+.section.contact .contact-grid div{background:none;padding:1.5rem;border-radius:18px;border:1px solid rgba(255,255,255,0.08)}
 .section.contact .contact-grid h3{margin-top:0}
 .section.contact .contact-grid a{color:var(--accent-2)}
 
@@ -101,10 +101,10 @@ h2{font-family:'Roboto',sans-serif;margin:0 0 .5rem}
 .tile-cert:nth-child(4n+3) .tile-icon{background:rgba(16,185,129,0.18)}
 .tile-cert:nth-child(4n){background:linear-gradient(145deg,rgba(255,166,0,0.18),rgba(220,120,0,0.14));border-color:rgba(255,166,0,0.22)}
 .tile-cert:nth-child(4n) .tile-icon{background:rgba(255,166,0,0.18)}
-.cert-card{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1rem 1.5rem;border-radius:10px;background:rgba(60,65,80,0.3);border:1px solid rgba(255,255,255,0.08);box-shadow:0 20px 30px rgba(0,0,0,0.14);transition:transform .25s ease,box-shadow .25s ease}
+.cert-card{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1rem 1.5rem;border-radius:10px;background:linear-gradient(180deg, #012932, transparent);border:1px solid rgba(255,255,255,0.08);box-shadow:0 20px 30px rgba(0,0,0,0.14);transition:transform .25s ease,box-shadow .25s ease}
 .cert-card:hover{transform:translateY(-6px);box-shadow:0 26px 45px rgba(0,0,0,0.18)}
 .cert-card-content{display:flex;flex-direction:column;justify-content:center}
-.cert-card-content h3{margin:0 0 1rem;font-size:1.2rem; line-height:29px;}
+.cert-card-content h3{margin:0 0 1rem;font-size:1rem; line-height:29px;}
 .cert-card-content p{margin:0;color:rgba(230,238,246,0.88);line-height:1.6}
 
 .timeline{list-style:none;padding:0;margin:2rem 0 0}
@@ -172,7 +172,7 @@ h2{font-family:'Roboto',sans-serif;margin:0 0 .5rem}
 .about-image img{width:100%;border-radius:12px;display:block}
 .about-list{list-style:none;padding:0;margin-top:1rem;color:var(--muted)}
 
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
 .social{list-style:none;padding:0;margin:0}
 .social li{margin-bottom:.5rem}
 
