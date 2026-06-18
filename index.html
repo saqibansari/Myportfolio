@@ -295,39 +295,72 @@ meet industry standards and best practices.</p>
   <script src="https://unpkg.com/rellax@1.12.1/rellax.min.js"></script>
   <script src="script.js"></script>
   <script>
-    (function(){
-      const btn = document.getElementById('download-resume');
-      if(!btn) return;
-      const filename = 'Mohammad_Saqib_Usability_Expert_Resume.pdf';
-      const encoded = encodeURIComponent(filename);
-      const url = '/resume/' + encoded;
-      btn.addEventListener('click', async function(e){
-        e.preventDefault();
-        try{
-          btn.classList.add('disabled');
-          const orig = btn.textContent;
-          btn.textContent = 'Downloading...';
-          const resp = await fetch(url);
-          if(!resp.ok) throw new Error('Network response was not ok: ' + resp.status);
-          const blob = await resp.blob();
-          const link = document.createElement('a');
-          const objUrl = URL.createObjectURL(blob);
-          link.href = objUrl;
-          link.download = filename;
-          document.body.appendChild(link);
-          link.click();
-          link.remove();
-          URL.revokeObjectURL(objUrl);
-          btn.textContent = orig;
-          btn.classList.remove('disabled');
-        }catch(err){
-          console.error('Resume download failed', err);
-          alert('Download failed. Please try again or open the resume in the resume folder.');
-          btn.classList.remove('disabled');
-          btn.textContent = 'Download Resume';
-        }
-      });
-    })();
-  </script>
+    //  (function(){
+    //   const btn = document.getElementById('download-resume');
+    //   if(!btn) return;
+    //   const filename = 'Mohammad_Saqib_Usability_Expert_Resume.pdf';
+    //   const encoded = encodeURIComponent(filename);
+    //   const url = '/resume/' + encoded;
+    //   btn.addEventListener('click', async function(e){
+    //     e.preventDefault();
+    //     try{
+    //       btn.classList.add('disabled');
+    //       const orig = btn.textContent;
+    //       btn.textContent = 'Downloading...';
+    //       const resp = await fetch(url);
+    //       if(!resp.ok) throw new Error('Network response was not ok: ' + resp.status);
+    //       const blob = await resp.blob();
+    //       const link = document.createElement('a');
+    //       const objUrl = URL.createObjectURL(blob);
+    //       link.href = objUrl;
+    //       link.download = filename;
+    //       document.body.appendChild(link);
+    //       link.click();
+    //       link.remove();
+    //       URL.revokeObjectURL(objUrl);
+    //       btn.textContent = orig;
+    //       btn.classList.remove('disabled');
+    //     }catch(err){
+    //       console.error('Resume download failed', err);
+    //       alert('Download failed. Please try again or open the resume in the resume folder.');
+    //       btn.classList.remove('disabled');
+    //       btn.textContent = 'Download Resume';
+    //     }
+    //   });
+    // })();
+(function () {
+  const btn = document.getElementById('download-resume');
+  if (!btn) return;
+
+  const filename = 'Mohammad_Saqib_Usability_Expert_Resume.pdf';
+  const url = './resume/' + encodeURIComponent(filename);
+
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    try {
+      btn.classList.add('disabled');
+      const orig = btn.textContent;
+      btn.textContent = 'Downloading...';
+
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      btn.textContent = orig;
+      btn.classList.remove('disabled');
+    } catch (err) {
+      console.error('Resume download failed', err);
+      alert('Download failed. Please try again.');
+      btn.classList.remove('disabled');
+      btn.textContent = 'Download Resume';
+    }
+  });
+})();
+</script>
 </body>
 </html>
