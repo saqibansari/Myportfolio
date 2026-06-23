@@ -60,6 +60,10 @@ html,body{height:100%;margin:0;background:linear-gradient(180deg,#071021 0%, #0f
 h2{font-family:'Roboto',sans-serif;margin:0 0 .5rem}
 .muted{color:var(--muted)}
 
+.company-tab-group{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.25rem 0 .5rem}
+.company-tab{display:inline-flex;align-items:center;justify-content:center;padding:.55rem 1.7rem;border-radius:999px;text-decoration:none;color:#e6eef6;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);font-weight:600;transition:transform .2s ease,background .2s ease,border-color .2s ease}
+.company-tab:hover{transform:translateY(-1px);background:rgba(124,92,255,0.2);border-color:rgba(124,92,255,0.45)}
+
 .overview .section-header{max-width:700px;margin:0 auto 2rem;text-align:center}
 /* .tile-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,260px));justify-content:center;gap:1.5rem;margin:0 auto;max-width:1080px} */
 .tile-grid {
@@ -154,6 +158,7 @@ h2{font-family:'Roboto',sans-serif;margin:0 0 .5rem}
 .timeline.timeline-animated .card{grid-area:card;max-width:620px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:1.15rem;border-radius:16px;box-shadow:0 10px 30px rgba(2,6,23,0.18)}
 .timeline.timeline-animated li::after{content:'';position:absolute;left:50.2%;top:14px;width:16px;height:16px;border-radius:50%;background:var(--bg);transform:translateX(-50%);border:3px solid var(--accent);box-shadow:0 0 0 4px rgba(124,92,255,0.08), 0 2px 8px rgba(2,6,23,0.3)}
 .timeline.timeline-animated li.visible{opacity:1;transform:none}
+.timeline.timeline-animated li[id]{scroll-margin-top:110px}
 
 
 .articles-grid{display:grid;grid-template-columns:minmax(220px,260px) 1fr;gap:1.5rem;align-items:start}
@@ -240,6 +245,8 @@ h2{font-family:'Roboto',sans-serif;margin:0 0 .5rem}
   .articles-grid{grid-template-columns:1fr}
   .articles-nav{flex-direction:row;flex-wrap:wrap;gap:.75rem;overflow:auto;padding:.5rem 0;}
   .article-tab{white-space:nowrap;margin-right:.6rem;width:auto;}
+  .company-tab-group{overflow:auto;flex-wrap:nowrap;padding-bottom:.35rem}
+  .company-tab{white-space:nowrap}
   .about-layout{grid-template-columns:1fr}
   .about-image-wrapper{position:relative;top:0}
   .about-highlights{grid-template-columns:1fr}
