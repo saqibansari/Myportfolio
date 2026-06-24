@@ -13,6 +13,52 @@
     history.scrollRestoration = 'manual';
   }
 
+  // nav splash transition for key sections
+  const splashCopyByPath = {
+    'work-experience.html': 'Building timeline',
+    'portfolio.html': 'Loading artwork',
+    'articles.html': 'Loading thoughts'
+  };
+
+  const splashOverlay = document.createElement('div');
+  splashOverlay.className = 'nav-splash-overlay';
+  splashOverlay.setAttribute('aria-hidden', 'true');
+  splashOverlay.innerHTML = '<p class="nav-splash-text"></p>';
+  document.body.appendChild(splashOverlay);
+
+  let isSplashNavigating = false;
+  const showNavSplashThenGo = (href, message) => {
+    if(isSplashNavigating) return;
+    isSplashNavigating = true;
+    const splashText = splashOverlay.querySelector('.nav-splash-text');
+    if(splashText) splashText.textContent = message;
+    splashOverlay.classList.add('active');
+    splashOverlay.setAttribute('aria-hidden', 'false');
+    setTimeout(() => {
+      window.location.href = href;
+    }, 1000);
+  };
+
+  document.querySelectorAll('.top-nav a[href]').forEach(link => {
+    link.addEventListener('click', e => {
+      if(e.defaultPrevented) return;
+      if(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      if(link.target && link.target !== '_self') return;
+
+      const rawHref = link.getAttribute('href');
+      if(!rawHref) return;
+      const normalized = rawHref.split('/').pop().split('#')[0];
+      const splashMessage = splashCopyByPath[normalized];
+      if(!splashMessage) return;
+
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      if(normalized === currentPage) return;
+
+      e.preventDefault();
+      showNavSplashThenGo(link.href, splashMessage);
+    });
+  });
+
   // const resetPageScroll = ()=>{
   //   window.scrollTo(0, 0);
   //   const activeArticle = document.querySelector('.article.active');
