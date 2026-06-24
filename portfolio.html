@@ -22,33 +22,82 @@
     </div>
   </header>
 
-  <main class="section">
-    <div class="container" >
+  <main class="section portfolio-showcase">
+    <div class="container">
       <h2>Portfolio</h2>
-      <p class="muted">Selected projects and case studies</p>
+      <p class="muted">Big project cards. Hover to discover. Click to open full media walkthrough.</p>
 
-      <div class="articles-grid">
-        <nav class="articles-nav">
-          <button class="article-tab active" data-target="p1">Brainstorming Platform</button>
-          <button class="article-tab" data-target="p2">Geofencing Floor UX</button>
-          <button class="article-tab" data-target="p3">Persona Selection System</button>
-          <button class="article-tab" data-target="p4">Robotic Arm Control</button>
-          <button class="article-tab" data-target="p5">Industrial Automation</button>
-          <button class="article-tab" data-target="p6">BEATVIDMI</button>
-          <button class="article-tab" data-target="p7">Performance Analyzer</button>
-          <button class="article-tab" data-target="p8">Jadeer Web App</button>
-          <button class="article-tab" data-target="p9">Smartwatch Booking</button>
-          <button class="article-tab" data-target="p10">Virtual Credit Card</button>
-          <button class="article-tab" data-target="p11">News Donation App</button>
-          <button class="article-tab" data-target="p12">Smart Devices</button>
-          <button class="article-tab" data-target="p13">Emoticons Artwork</button>
-        </nav>
+      <section class="portfolio-cards" aria-label="Portfolio projects">
+        <button class="project-card" type="button" data-target="p1" aria-label="Open AI prompts to read docs" style="--card-bg:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1400&q=70');">
+          <span class="project-icon">AI</span>
+          <h3>AI Prompts to Read Docs</h3>
+          <p>Prompt-powered flow to transform documents faster.</p>
+        </button>
+        <button class="project-card" type="button" data-target="p2" aria-label="Open Geofencing floor UX" style="--card-bg:url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1400&q=70');">
+          <span class="project-icon">GF</span>
+          <h3>Geofencing Floor UX</h3>
+          <p>Factory zones, alerts, and live operational visibility.</p>
+        </button>
+        <button class="project-card" type="button" data-target="p3" aria-label="Open persona selection system" style="--card-bg:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=70');">
+          <span class="project-icon">PS</span>
+          <h3>Persona Selection System</h3>
+          <p>Compare personas and refine strategy with clarity.</p>
+        </button>
+        <button class="project-card" type="button" data-target="p4" aria-label="Open robotic arm control" style="--card-bg:url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1400&q=70');">
+          <span class="project-icon">RA</span>
+          <h3>Robotic Arm Control</h3>
+          <p>Precision command UI for high-stakes workflows.</p>
+        </button>
+        <button class="project-card" type="button" data-target="p5" aria-label="Open industrial automation" style="--card-bg:url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=70');">
+          <span class="project-icon">IA</span>
+          <h3>Industrial Automation</h3>
+          <p>Reliable configuration journeys for complex devices.</p>
+        </button>
+        <button class="project-card" type="button" data-target="p6" aria-label="Open BEATVIDMI" style="--card-bg:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=70');">
+          <span class="project-icon">BV</span>
+          <h3>BEATVIDMI</h3>
+          <p>Video analytics with actionable creator insights.</p>
+        </button>
+        <button class="project-card" type="button" data-target="p7" aria-label="Open performance analyzer" style="--card-bg:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=70');">
+          <span class="project-icon">PA</span>
+          <h3>Performance Analyzer</h3>
+          <p>Track trends and growth signals in one dashboard.</p>
+        </button>
+        <button class="project-card" type="button" data-target="p8" aria-label="Open Jadeer web app" style="--card-bg:url('https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=1400&q=70');">
+          <span class="project-icon">JW</span>
+          <h3>Jadeer Web App</h3>
+          <p>Bold creative collaboration with polished interactions.</p>
+        </button>
+        <button class="project-card" type="button" data-target="p9" aria-label="Open smartwatch booking app" style="--card-bg:url('https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=1400&q=70');">
+          <span class="project-icon">SW</span>
+          <h3>Smartwatch Booking</h3>
+          <p>Wearable-first table booking made effortless.</p>
+        </button>
+        <button class="project-card" type="button" data-target="p10" aria-label="Open virtual credit card app" style="--card-bg:url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1400&q=70');">
+          <span class="project-icon">VC</span>
+          <h3>Virtual Credit Card</h3>
+          <p>Secure digital card controls with modern finance UX.</p>
+        </button>
+        <button class="project-card" type="button" data-target="p11" aria-label="Open news donation app" style="--card-bg:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1400&q=70');">
+          <span class="project-icon">ND</span>
+          <h3>News Donation App</h3>
+          <p>News storytelling blended with giving experiences.</p>
+        </button>
+        <button class="project-card" type="button" data-target="p12" aria-label="Open smart devices solution" style="--card-bg:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=70');">
+          <span class="project-icon">SD</span>
+          <h3>Smart Devices</h3>
+          <p>Connected control views that stay calm and clear.</p>
+        </button>
+        <button class="project-card" type="button" data-target="p13" aria-label="Open emoticons logos artwork" style="--card-bg:url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1400&q=70');">
+          <span class="project-icon">EA</span>
+          <h3>Emoticons Artwork</h3>
+          <p>Illustration and branding collection with personality.</p>
+        </button>
+      </section>
 
+      <section class="portfolio-media-bank" aria-hidden="true">
         <div class="articles-content">
           <article id="p1" class="article active">
-            <h3>Brainstorming a platform to convert docs using prompts</h3>
-            <p>Concept work for a prompt-driven document conversion tool: research, ideation, and visual design for a smarter authoring workflow.</p>
-            <p class="muted">This case study highlights the first portfolio project, including concept boards, UI explorations, and a clean interaction-driven interface.</p>
             <div class="project-gallery">
               <img src="portpictures/p1_a14bf1238814347.691c6f8cf38fc.png" alt="Platform concept overview" />
               <img src="portpictures/p1_fa4937238814347.691c6f8cf32a1.png" alt="Prompt-based workflow" />
@@ -63,26 +112,9 @@
                 Your browser does not support embedded videos.
               </video>
             </div>
-            <div class="project-details">
-              <div>
-                <h4>Challenge</h4>
-                <p>Design a platform that turns unstructured documents into structured, actionable outputs using intelligent prompts and minimal manual steps.</p>
-              </div>
-              <div>
-                <h4>Solution</h4>
-                <p>Built a modular experience centered on prompt selection, document preview, and result transformation. The interface emphasizes clarity, feedback, and quick iteration.</p>
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p>The concept presents a polished workflow for users to brainstorm, refine, and convert documents into the formats they need without losing context.</p>
-              </div>
-            </div>
           </article>
 
           <article id="p2" class="article">
-            <h3>Geofencing inside a factory floor</h3>
-            <p>UX and interface design for a factory floor geofencing system that tracks assets, zones, and alerts in real time.</p>
-            <p class="muted">This case study includes factory mapping, zone management, sensor status, and workflow screens for operational visibility.</p>
             <div class="project-gallery">
               <img src="portpictures/p2_12ee3b248100541.6a16a6e715e8a.png" alt="Factory floor geofencing overview" />
               <img src="portpictures/p2_4a3dba248100541.69e9c83e06963.png" alt="Zone and asset mapping" />
@@ -97,26 +129,9 @@
               <img src="portpictures/p2_508aa6248100541.69e9c83e05ed6.png" alt="Machine tracking and status" />
               <img src="portpictures/p2_4db4bd248100541.69e9c83e051c6.png" alt="Facility operations summary" />
             </div>
-            <div class="project-details">
-              <div>
-                <h4>Challenge</h4>
-                <p>Enable factory teams to see real-time geofencing zones and asset movement across a complex manufacturing floor.</p>
-              </div>
-              <div>
-                <h4>Solution</h4>
-                <p>Created a layered dashboard with map views, alert cards, and contextual controls so operators can manage zones and devices quickly.</p>
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p>The design helps reduce response time for location-based alerts and improves visibility into facility operations through a clean, mobile-ready interface.</p>
-              </div>
-            </div>
           </article>
 
           <article id="p3" class="article">
-            <h3>Persona Selection System — Web app</h3>
-            <p>A user-centered web app that makes it easier to choose, compare, and refine customer personas for product strategy and UX research.</p>
-            <p class="muted">This case study demonstrates flexible persona filtering, comparison dashboards, and a polished selection experience.</p>
             <div class="project-gallery">
               <img src="portpictures/p3_ff0fc0245845249.69b6c6103d19d.png" alt="Persona selection home screen" />
               <img src="portpictures/p3_516b70245845249.69b6c6103b8ff.png" alt="User persona filter interface" />
@@ -131,26 +146,9 @@
                 Your browser does not support embedded videos.
               </video>
             </div>
-            <div class="project-details">
-              <div>
-                <h4>Challenge</h4>
-                <p>Help teams choose the right personas without getting lost in complex research data or overloaded dashboards.</p>
-              </div>
-              <div>
-                <h4>Solution</h4>
-                <p>Built a web app that blends persona discovery with comparison tools and a guided selection workflow for faster decision-making.</p>
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p>The final experience is both visual and practical, making persona management easier across product, marketing, and research teams.</p>
-              </div>
-            </div>
           </article>
 
           <article id="p4" class="article">
-            <h3>Robotic Arm — Control & Design</h3>
-            <p>A control interface concept for robotic arm operation, focusing on precise motion control, live feedback, and simplified command flows.</p>
-            <p class="muted">This case study covers control screens, command panels, and a streamlined interface for manufacturing robotics.</p>
             <div class="project-gallery">
               <img src="portpictures/p4_6ce825244077603.698f084d30f6f.png" alt="Robotic arm control interface" />
               <img src="portpictures/p4_364e3c244077603.698f084d32394.png" alt="Command panel and settings" />
@@ -160,26 +158,9 @@
                 Your browser does not support embedded videos.
               </video>
             </div>
-            <div class="project-details">
-              <div>
-                <h4>Challenge</h4>
-                <p>Translate complex arm control workflows into an interface that operators can use confidently in high-stakes environments.</p>
-              </div>
-              <div>
-                <h4>Solution</h4>
-                <p>Designed a clear control space with feedback overlays, status panels, and contextual commands to support quick adjustments.</p>
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p>The experience feels technical yet accessible, helping teams interact with robotic systems without losing precision or clarity.</p>
-              </div>
-            </div>
           </article>
 
           <article id="p5" class="article">
-            <h3>Industrial Automation — Device configuration</h3>
-            <p>A device configuration system for industrial automation, highlighting setup flows, hardware integration, and control monitoring.</p>
-            <p class="muted">This case study presents a configuration interface designed for reliability, visibility, and rapid setup.</p>
             <div class="project-gallery">
               <img src="portpictures/p5_2a0ded232598045.68a55de33ec24.png" alt="Device configuration overview" />
               <img src="portpictures/p5_231b68232598045.689f48d6426c0.png" alt="Automation device dashboard" />
@@ -190,26 +171,9 @@
               <img src="portpictures/p5_d560a6232598045.689f48d642c21.png" alt="Connection and trigger settings" />
               <img src="portpictures/p5_f12985232598045.689f48d641f50.png" alt="Industrial automation summary" />
             </div>
-            <div class="project-details">
-              <div>
-                <h4>Challenge</h4>
-                <p>Build an industrial configuration experience that supports complex device setup without overwhelming operators.</p>
-              </div>
-              <div>
-                <h4>Solution</h4>
-                <p>Defined a step-based setup flow with clear device status, integration checks, and control panels for automation hardware.</p>
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p>The design reduces setup friction and provides operators with a clean overview of automation devices, connections, and alerts.</p>
-              </div>
-            </div>
           </article>
 
           <article id="p6" class="article">
-            <h3>BEATVIDMI — Video Analytics Platform</h3>
-            <p>A video analytics experience for creators, delivering smart content review, recommendations, and motion-driven previews.</p>
-            <p class="muted">This project shows video metadata screens, engagement insights, and motion-rich UI components.</p>
             <div class="project-gallery">
               <img src="portpictures/p6_81b085220271463.687f21e0d79ba.png" alt="BEATVIDMI dashboard" />
               <img src="portpictures/p6_01d595220271463.687f21e0d80dd.png" alt="Video analytics overview" />
@@ -219,26 +183,9 @@
               <img src="portpictures/p6_e5d955220271463.67c00088de6cb.png" alt="Recommendation cards" />
               <img src="portpictures/p6_fd5203220271463.67c00088dda32.png" alt="Workflow overview" />
             </div>
-            <div class="project-details">
-              <div>
-                <h4>Challenge</h4>
-                <p>Create an intuitive way for creators to monitor video performance and discover engaging content faster.</p>
-              </div>
-              <div>
-                <h4>Solution</h4>
-                <p>Designed a unified analytics workspace with preview panels, performance cards, and recommendation cues.</p>
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p>The result is a visually strong dashboard that balances motion, data, and creator-focused storytelling.</p>
-              </div>
-            </div>
           </article>
 
           <article id="p7" class="article">
-            <h3>Professional Performance Analyzer</h3>
-            <p>A performance monitoring app that captures trends, metrics, and professional improvement signals in one dashboard.</p>
-            <p class="muted">This case study features analytics views, comparison panels, and actionable performance summaries.</p>
             <div class="project-gallery">
               <img src="portpictures/p7_9f1175216226109.677ccce71895a.png" alt="Performance analyzer dashboard" />
               <img src="portpictures/p7_6de60f216226109.677ccce718088.png" alt="Metric detail cards" />
@@ -246,26 +193,9 @@
               <img src="portpictures/p7_dea938216226109.677ccce71779e.png" alt="Insights and alerts" />
               <img src="portpictures/p7_2bfc40216226109.677ccce716bfa.png" alt="Performance summary" />
             </div>
-            <div class="project-details">
-              <div>
-                <h4>Challenge</h4>
-                <p>Help professionals understand their performance with minimal effort and maximum visual clarity.</p>
-              </div>
-              <div>
-                <h4>Solution</h4>
-                <p>Delivered a crisp analytics interface with clear KPI cards, trend charts, and comparison filters.</p>
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p>Users can quickly spot opportunities for improvement and track progress in a meaningful way.</p>
-              </div>
-            </div>
           </article>
 
           <article id="p8" class="article">
-            <h3>Jadeer Web App</h3>
-            <p>A modern web application for creative collaboration and content curation, designed for a bold brand identity.</p>
-            <p class="muted">This case study showcases layouts, interactive tools, and motion-forward UI patterns.</p>
             <div class="project-gallery">
               <img src="portpictures/p8_c18cc6117241157.6071f71a66903.png" alt="Jadeer landing screen" />
               <img src="portpictures/p8_237969117241157.6071f71a68b03.png" alt="Content curation interface" />
@@ -274,26 +204,9 @@
               <img src="portpictures/p8_fd1bdb117241157.6071f71a67b8e.png" alt="Interactions and navigation" />
               <img src="portpictures/p8_9c3158117241157.6071f71a680c2.png" alt="Visual design details" />
             </div>
-            <div class="project-details">
-              <div>
-                <h4>Challenge</h4>
-                <p>Build a polished web presence that feels premium while keeping workflows easy to follow.</p>
-              </div>
-              <div>
-                <h4>Solution</h4>
-                <p>Created a refined grid-based UI with strong visual hierarchy and expressive branding cues.</p>
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p>The design balances art direction and usability, delivering an elevated experience for creative users.</p>
-              </div>
-            </div>
           </article>
 
           <article id="p9" class="article">
-            <h3>Smartwatch Table Booking App</h3>
-            <p>A compact smartwatch app for reserving tables, checking availability, and managing dining plans on the go.</p>
-            <p class="muted">This case study includes wearables-first UI, glanceable cards, and quick confirmation flows.</p>
             <div class="project-gallery">
               <img src="portpictures/p9_6df36f116990019.606d745178e74.png" alt="Smartwatch booking home" />
               <img src="portpictures/p9_9f36cd116990019.606d745179722.png" alt="Time slot selection" />
@@ -303,52 +216,18 @@
               <img src="portpictures/p9_6941db116990019.606d745177168.png" alt="Wearable app interactions" />
               <img src="portpictures/p9_f7f98e116990019.606d745175c3f.png" alt="Reservation flow" />
             </div>
-            <div class="project-details">
-              <div>
-                <h4>Challenge</h4>
-                <p>Design a seamless restaurant booking experience for a smartwatch with limited screen real estate.</p>
-              </div>
-              <div>
-                <h4>Solution</h4>
-                <p>Used concise cards, large touch targets, and streamlined booking steps for instant access.</p>
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p>The interface makes restaurant reservations feel fast, light, and perfect for wearable use.</p>
-              </div>
-            </div>
           </article>
 
           <article id="p10" class="article">
-            <h3>Virtual Credit Card App</h3>
-            <p>A modern finance app designed for digital card management, spending controls, and transaction visibility.</p>
-            <p class="muted">This case study shows secure card setup, spending insights, and payment flows.</p>
             <div class="project-gallery">
               <img src="portpictures/p10_635542113454079.602815ea31535.png" alt="Virtual card onboarding" />
               <img src="portpictures/p10_41f390113454079.602815ea30ac1.png" alt="Card controls" />
               <img src="portpictures/p10_2a23e1113454079.602815ea30f00.png" alt="Transaction history" />
               <img src="portpictures/p10_f9b609113454079.602815ea30622.png" alt="Payment experience" />
             </div>
-            <div class="project-details">
-              <div>
-                <h4>Challenge</h4>
-                <p>Build a trustworthy digital wallet experience for managing virtual credit cards securely.</p>
-              </div>
-              <div>
-                <h4>Solution</h4>
-                <p>Designed a polished card interface with clear spend categories and simple controls.</p>
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p>The final UI blends trust signals and modern visual design for everyday finance users.</p>
-              </div>
-            </div>
           </article>
 
           <article id="p11" class="article">
-            <h3>News App with Donation Interface</h3>
-            <p>A news reader concept paired with donation and support actions to help readers engage with causes.</p>
-            <p class="muted">This case study highlights journalism, giving flows, and engaging article layouts.</p>
             <div class="project-gallery">
               <img src="portpictures/p11_c82c9e117339049.607438a621a33.png" alt="News feed home" />
               <img src="portpictures/p11_fd9f18117339049.607438a622b90.gif" alt="Donation interaction GIF" />
@@ -359,49 +238,15 @@
               <img src="portpictures/p11_b5c514117339049.607438a62300a.png" alt="Donation experience" />
               <img src="portpictures/p11_81c098117339049.607438a623bf4.png" alt="News and support flow" />
             </div>
-            <div class="project-details">
-              <div>
-                <h4>Challenge</h4>
-                <p>Combine news consumption with a donation path that feels natural and supportive.</p>
-              </div>
-              <div>
-                <h4>Solution</h4>
-                <p>Designed an integrated interface where stories and giving options coexist clearly and respectfully.</p>
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p>The result supports engaged readers while making charitable actions feel seamless and rewarding.</p>
-              </div>
-            </div>
           </article>
 
           <article id="p12" class="article">
-            <h3>Smart Devices Solution</h3>
-            <p>A connected device control experience focused on simple device management and system overview.</p>
-            <p class="muted">This case study features a compact smart home solution with clear device status and control patterns.</p>
             <div class="project-gallery">
               <img src="portpictures/p12_36edeb106442869.5f9011c14e0a8.png" alt="Smart devices dashboard" />
-            </div>
-            <div class="project-details">
-              <div>
-                <h4>Challenge</h4>
-                <p>Design a reliable interface for managing multiple connected devices without overwhelming the user.</p>
-              </div>
-              <div>
-                <h4>Solution</h4>
-                <p>Presented device information in a clean status view with quick access controls.</p>
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p>The final design makes smart device control feel calm and manageable across a single screen.</p>
-              </div>
             </div>
           </article>
 
           <article id="p13" class="article">
-            <h3>Emoticons / Logos / Artwork</h3>
-            <p>A branding and illustration collection built around emoticons, logos, and polished art direction.</p>
-            <p class="muted">This case study includes iconography, landing visuals, and logo concepts for creative identities.</p>
             <div class="project-gallery">
               <img src="portpictures/p13_10538164670755.67d3e10f9cbd1.png" alt="Emoticon branding" />
               <img src="portpictures/p13_b51d5b64670755.67d3e10f9bf65.png" alt="Logo artwork" />
@@ -416,23 +261,9 @@
               <img src="portpictures/p13_43fa5264670755.67d3e10f9b86f.png" alt="Final artwork spread" />
               <img src="portpictures/p13_67cf4464670755.67d3e21b1e4ca.png" alt="Art direction preview" />
             </div>
-            <div class="project-details">
-              <div>
-                <h4>Challenge</h4>
-                <p>Showcase emotive logo and illustration work in a polished portfolio format.</p>
-              </div>
-              <div>
-                <h4>Solution</h4>
-                <p>Created strong visual layouts that present icons, logos, and art pieces with clarity and style.</p>
-              </div>
-              <div>
-                <h4>Outcome</h4>
-                <p>The collection reflects a creative brand identity with playful and professional expression.</p>
-              </div>
-            </div>
           </article>
         </div>
-      </div>
+      </section>
     </div>
   </main>
 
@@ -454,34 +285,25 @@
         </div>
       </div>
 
-  </footer>
-
   <script src="script.js"></script>
   <script>
-    // Diagnostic: highlight any images that fail to load and log details
     (function(){
-      function mark(img, msg){
-        img.style.outline = '3px solid rgba(255,60,60,0.9)';
-        img.style.background = 'rgba(255,60,60,0.04)';
-        img.dataset.loadError = msg || 'failed';
-      }
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const target = card.dataset.target;
+          const firstMedia = document.querySelector(`#${target} .project-gallery img, #${target} .project-gallery video`);
+          if(firstMedia){
+            firstMedia.click();
+          }
+        });
 
-      const imgs = Array.from(document.querySelectorAll('.project-gallery img, .project-gallery .gallery-image'));
-      let failures = 0;
-      imgs.forEach(img => {
-        if(img.complete){
-          if(img.naturalWidth === 0){ failures++; mark(img, 'zero-size'); }
-        } else {
-          img.addEventListener('error', function(){ failures++; mark(img, 'error-event'); console.warn('Image failed:', img.src); });
-          img.addEventListener('load', function(){ /* loaded */ });
-        }
+        card.addEventListener('keydown', event => {
+          if(event.key === 'Enter' || event.key === ' '){
+            event.preventDefault();
+            card.click();
+          }
+        });
       });
-      // Re-check after a short delay for images that may finish loading
-      setTimeout(()=>{
-        imgs.forEach(img=>{ if(img.naturalWidth===0){ failures++; mark(img,'zero-after'); }});
-        if(failures>0){ console.warn('Portfolio image diagnostics: found', failures, 'problematic images.'); }
-        else { console.log('Portfolio image diagnostics: all images loaded successfully.'); }
-      }, 1200);
     })();
   </script>
 </body>
