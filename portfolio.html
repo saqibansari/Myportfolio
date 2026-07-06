@@ -22,82 +22,31 @@
     </div>
   </header>
 
-  <main class="section portfolio-showcase">
-    <div class="container">
+  <main class="section portfolio-page">
+    <div class="container articles portfolio-articles">
       <h2>Portfolio</h2>
-      <p class="muted">Big project cards. Hover to discover. Click to open full media walkthrough.</p>
+      <p class="muted">Case-study view of selected projects. Use the tabs to switch projects, and click any screenshot or video to open the fullscreen overlay.</p>
 
-      <section class="portfolio-cards" aria-label="Portfolio projects">
-        <button class="project-card" type="button" data-target="p1" aria-label="Open AI prompts to read docs" style="--card-bg:url('https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1400&q=70');">
-          <span class="project-icon">AI</span>
-          <h3>AI Prompts to Read Docs</h3>
-          <p>Prompt-powered flow to transform documents faster.</p>
-        </button>
-        <button class="project-card" type="button" data-target="p2" aria-label="Open Geofencing floor UX" style="--card-bg:url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1400&q=70');">
-          <span class="project-icon">GF</span>
-          <h3>Geofencing Floor UX</h3>
-          <p>Factory zones, alerts, and live operational visibility.</p>
-        </button>
-        <button class="project-card" type="button" data-target="p3" aria-label="Open persona selection system" style="--card-bg:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=70');">
-          <span class="project-icon">PS</span>
-          <h3>Persona Selection System</h3>
-          <p>Compare personas and refine strategy with clarity.</p>
-        </button>
-        <button class="project-card" type="button" data-target="p4" aria-label="Open robotic arm control" style="--card-bg:url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1400&q=70');">
-          <span class="project-icon">RA</span>
-          <h3>Robotic Arm Control</h3>
-          <p>Precision command UI for high-stakes workflows.</p>
-        </button>
-        <button class="project-card" type="button" data-target="p5" aria-label="Open industrial automation" style="--card-bg:url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=70');">
-          <span class="project-icon">IA</span>
-          <h3>Industrial Automation</h3>
-          <p>Reliable configuration journeys for complex devices.</p>
-        </button>
-        <button class="project-card" type="button" data-target="p6" aria-label="Open BEATVIDMI" style="--card-bg:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=70');">
-          <span class="project-icon">BV</span>
-          <h3>BEATVIDMI</h3>
-          <p>Video analytics with actionable creator insights.</p>
-        </button>
-        <button class="project-card" type="button" data-target="p7" aria-label="Open performance analyzer" style="--card-bg:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=70');">
-          <span class="project-icon">PA</span>
-          <h3>Performance Analyzer</h3>
-          <p>Track trends and growth signals in one dashboard.</p>
-        </button>
-        <button class="project-card" type="button" data-target="p8" aria-label="Open Jadeer web app" style="--card-bg:url('https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=1400&q=70');">
-          <span class="project-icon">JW</span>
-          <h3>Jadeer Web App</h3>
-          <p>Bold creative collaboration with polished interactions.</p>
-        </button>
-        <button class="project-card" type="button" data-target="p9" aria-label="Open smartwatch booking app" style="--card-bg:url('https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=1400&q=70');">
-          <span class="project-icon">SW</span>
-          <h3>Smartwatch Booking</h3>
-          <p>Wearable-first table booking made effortless.</p>
-        </button>
-        <button class="project-card" type="button" data-target="p10" aria-label="Open virtual credit card app" style="--card-bg:url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1400&q=70');">
-          <span class="project-icon">VC</span>
-          <h3>Virtual Credit Card</h3>
-          <p>Secure digital card controls with modern finance UX.</p>
-        </button>
-        <button class="project-card" type="button" data-target="p11" aria-label="Open news donation app" style="--card-bg:url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1400&q=70');">
-          <span class="project-icon">ND</span>
-          <h3>News Donation App</h3>
-          <p>News storytelling blended with giving experiences.</p>
-        </button>
-        <button class="project-card" type="button" data-target="p12" aria-label="Open smart devices solution" style="--card-bg:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=70');">
-          <span class="project-icon">SD</span>
-          <h3>Smart Devices</h3>
-          <p>Connected control views that stay calm and clear.</p>
-        </button>
-        <button class="project-card" type="button" data-target="p13" aria-label="Open emoticons logos artwork" style="--card-bg:url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1400&q=70');">
-          <span class="project-icon">EA</span>
-          <h3>Emoticons Artwork</h3>
-          <p>Illustration and branding collection with personality.</p>
-        </button>
-      </section>
+      <div class="articles-grid">
+        <nav class="articles-nav portfolio-nav" aria-label="Portfolio projects">
+          <button class="article-tab active" data-target="p14">DesignLens</button>
+          <button class="article-tab" data-target="p1">AI Prompts to Read Docs</button>
+          <button class="article-tab" data-target="p2">Geofencing Floor UX</button>
+          <button class="article-tab" data-target="p3">Persona Selection System</button>
+          <button class="article-tab" data-target="p4">Robotic Arm Control</button>
+          <button class="article-tab" data-target="p5">Industrial Automation</button>
+          <button class="article-tab" data-target="p6">BEATVIDMI</button>
+          <button class="article-tab" data-target="p7">Performance Analyzer</button>
+          <button class="article-tab" data-target="p8">Jadeer Web App</button>
+          <button class="article-tab" data-target="p9">Smartwatch Booking</button>
+          <button class="article-tab" data-target="p10">Virtual Credit Card</button>
+          <button class="article-tab" data-target="p11">News Donation App</button>
+          <button class="article-tab" data-target="p12">Smart Devices</button>
+          <button class="article-tab" data-target="p13">Emoticons Artwork</button>
+        </nav>
 
-      <section class="portfolio-media-bank" aria-hidden="true">
         <div class="articles-content">
-          <article id="p1" class="article active">
+          <article id="p1" class="article">
             <div class="project-gallery">
               <img src="portpictures/p1_a14bf1238814347.691c6f8cf38fc.png" alt="Platform concept overview" />
               <img src="portpictures/p1_fa4937238814347.691c6f8cf32a1.png" alt="Prompt-based workflow" />
@@ -262,8 +211,37 @@
               <img src="portpictures/p13_67cf4464670755.67d3e21b1e4ca.png" alt="Art direction preview" />
             </div>
           </article>
+
+          <article id="p14" class="article active">
+            <div class="project-details">
+              <div>
+                <h4>Overview</h4>
+                <p>DesignLens is an AI-powered design review platform that helps teams inspect screens faster, spot usability and accessibility issues, and keep feedback consistent across reviewers.</p>
+              </div>
+              <div>
+                <h4>Focus Areas</h4>
+                <p>Review scoring, design-system compliance, visual hierarchy, spacing, content clarity, and team coaching insights for product designers and design leads.</p>
+              </div>
+              <div>
+                <h4>Value</h4>
+                <p>It shortens review cycles, standardizes critique, and gives teams a clearer path from raw screens to actionable improvements.</p>
+              </div>
+            </div>
+            <div class="project-gallery">
+              <img src="portpictures/p14_ui0.png" alt="DesignLens executive summary with problem statement and success metrics" />
+              <img src="portpictures/p14_ui1.png" alt="DesignLens team analytics dashboard with review metrics" />
+              <img src="portpictures/p14_ui2.png" alt="DesignLens designer quality report table" />
+              <img src="portpictures/p14_ui3.png" alt="DesignLens common issues breakdown and severity view" />
+              <img src="portpictures/p14_ui4.png" alt="DesignLens manager coaching insights panel" />
+              <img src="portpictures/p14_ui5.png" alt="DesignLens review workspace and analysis screen" />
+              <img src="portpictures/p14_ui6.png" alt="DesignLens AI feedback and annotations view" />
+              <img src="portpictures/p14_ui7.png" alt="DesignLens comparison and scoring view" />
+              <img src="portpictures/p14_ui8.png" alt="DesignLens review workflow screen" />
+              <img src="portpictures/p14_ui9.png" alt="DesignLens final dashboard summary with quality trends" />
+            </div>
+          </article>
         </div>
-      </section>
+      </div>
     </div>
   </main>
 
@@ -292,22 +270,6 @@
 
   <script src="script.js"></script>
   <script>
-    (function(){
-      document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('click', () => {
-          const target = card.dataset.target;
-          const firstMedia = document.querySelector(`#${target} .project-gallery img, #${target} .project-gallery video`);
-          if(firstMedia){ firstMedia.click(); }
-        });
-        card.addEventListener('keydown', event => {
-          if(event.key === 'Enter' || event.key === ' '){
-            event.preventDefault();
-            card.click();
-          }
-        });
-      });
-    })();
-
     /* ── Gallery zoom ───────────────────────────────────────────── */
     (function(){
       const overlay    = document.querySelector('.gallery-overlay');
