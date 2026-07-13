@@ -38,26 +38,27 @@
       window.location.href = href;
     }, 1000);
   };
+  window.__showNavSplashThenGo = showNavSplashThenGo;
 
-  document.querySelectorAll('.top-nav a[href]').forEach(link => {
-    link.addEventListener('click', e => {
-      if(e.defaultPrevented) return;
-      if(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-      if(link.target && link.target !== '_self') return;
+  document.addEventListener('click', e => {
+    if(e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
 
-      const rawHref = link.getAttribute('href');
-      if(!rawHref) return;
-      const normalized = rawHref.split('/').pop().split('#')[0];
-      const splashMessage = splashCopyByPath[normalized];
-      if(!splashMessage) return;
+    const link = e.target.closest('.top-nav a[href]');
+    if(!link) return;
+    if(link.target && link.target !== '_self') return;
 
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      if(normalized === currentPage) return;
+    const rawHref = link.getAttribute('href');
+    if(!rawHref) return;
+    const normalized = rawHref.split('/').pop().split('#')[0];
+    const splashMessage = splashCopyByPath[normalized];
+    if(!splashMessage) return;
 
-      e.preventDefault();
-      showNavSplashThenGo(link.href, splashMessage);
-    });
-  });
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    if(normalized === currentPage) return;
+
+    e.preventDefault();
+    showNavSplashThenGo(link.href, splashMessage);
+  }, true);
 
   // const resetPageScroll = ()=>{
   //   window.scrollTo(0, 0);

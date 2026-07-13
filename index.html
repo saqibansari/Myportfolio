@@ -64,7 +64,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
   <header class="site-header home-header">
@@ -99,24 +99,31 @@
     <section id="overview" class="section overview">
       <div class="container">
         <div class="section-header" style="margin:0 auto 3rem;">
+          <!-- <span class="section-eyebrow">Explore this site</span> -->
           <h2>Explore the site</h2>
-          <p class="muted">Jump to the main sections to explore career highlights, selected portfolio work, articles, and a short bio.</p>
+          <p class="muted">Jump into the main areas to see the career path, selected portfolio work, articles, and a short bio.</p>
         </div>
         <div class="tile-grid" >
-          <a class="tile tile-career" href="work-experience.html" style="padding: 2rem 2rem;">
+          <a class="tile tile-career" href="work-experience.html">
             <div class="tile-icon">🧭</div>
-            <h3>Work Experience</h3>
-            <p>Discover the work history, roles, and growth path across multiple design teams and product launches.</p>
+            <div class="tile-copy">
+              <h3>Work Experience</h3>
+              <p>Discover the work history, roles, and growth path across multiple design teams and product launches.</p>
+            </div>
           </a>
-          <a class="tile tile-portfolio" href="portfolio.html" style="padding: 2rem 2rem;">
+          <a class="tile tile-portfolio" href="portfolio.html">
             <div class="tile-icon">📁</div>
-            <h3>Portfolio</h3>
-            <p>Browse project case studies, product journeys, and visual work examples from recent initiatives.</p>
+            <div class="tile-copy">
+              <h3>Portfolio</h3>
+              <p>Browse project case studies, product journeys, and visual work examples from recent initiatives.</p>
+            </div>
           </a>
-          <a class="tile tile-articles" href="articles.html" style="padding: 2rem 2rem;">
+          <a class="tile tile-articles" href="articles.html">
             <div class="tile-icon">✍️</div>
-            <h3>Articles</h3>
-            <p>Read thoughts on design systems, product strategy, research, and experience design trends.</p>
+            <div class="tile-copy">
+              <h3>Articles</h3>
+              <p>Read thoughts on design systems, product strategy, research, and experience design trends.</p>
+            </div>
           </a>
         </div>
       </div>
@@ -144,7 +151,7 @@
               <div class="highlight-card">
                 <div class="highlight-icon">⚡</div>
                 <h4>Experience</h4>
-                <p>13+ years in UX/UI design across international firms</p>
+                <p>14 years in UX/UI design across international firms</p>
               </div>
               <div class="highlight-card">
                 <div class="highlight-icon">🌍</div>
@@ -189,10 +196,13 @@
     <div class="section-divider"></div>
 
     <section id="certifications" class="section certifications" style="padding-top:0;">
-      <div class="container" style="text-align: center;">
-        <h2>Certifications</h2>
-        <p class="muted">UX, Usability and Digital experience certifications</p>
-        <div class="tile-grid" style="margin-top:3rem;">
+      <div class="container">
+        <div class="certifications-intro">
+          <h2>Certifications</h2>
+          <p class="muted">Selected UX, usability, and digital experience certifications.</p>
+          <p class="certifications-note">Click any card to preview the certificate.</p>
+        </div>
+        <div class="tile-grid cert-grid-compact">
           <div class="cert-card cert-card-clickable" id="cert-card-1" tabindex="0" data-cert-src="certificates/IDF_Dynamic_User_Experience_Design_and_Usability.jpg" role="button" aria-label="View certificate image">
             <div class="cert-card-content">
               <h3>Dynamic User Experience - Design & Usability</h3>
@@ -365,7 +375,7 @@
         <div class="clients-marquee" aria-label="Clients I worked with">
           <div class="clients-track">
             <span class="client-chip">Google</span>
-            <span class="client-chip">Astra Zenica</span>
+            <span class="client-chip">AstraZeneca</span>
             <span class="client-chip">Monshaat</span>
             <span class="client-chip">Reebok</span>
             <span class="client-chip">Merck</span>
@@ -373,7 +383,7 @@
             <span class="client-chip">SABIC</span>
             <span class="client-chip">GSK</span>
             <span class="client-chip" aria-hidden="true">Google</span>
-            <span class="client-chip" aria-hidden="true">Astra Zenica</span>
+            <span class="client-chip" aria-hidden="true">AstraZeneca</span>
             <span class="client-chip" aria-hidden="true">Monshaat</span>
             <span class="client-chip" aria-hidden="true">Reebok</span>
             <span class="client-chip" aria-hidden="true">Merck</span>
@@ -438,6 +448,64 @@
 
   <script src="https://unpkg.com/rellax@1.12.1/rellax.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    (function () {
+      const splashCopyByPath = {
+        'work-experience.html': 'Building timeline',
+        'portfolio.html': 'Loading artwork',
+        'articles.html': 'Loading thoughts'
+      };
+
+      let splashOverlay = document.querySelector('.nav-splash-overlay');
+      if (!splashOverlay) {
+        splashOverlay = document.createElement('div');
+        splashOverlay.className = 'nav-splash-overlay';
+        splashOverlay.setAttribute('aria-hidden', 'true');
+        splashOverlay.innerHTML = '<p class="nav-splash-text"></p>';
+        document.body.appendChild(splashOverlay);
+      }
+
+      let isSplashNavigating = false;
+      const showNavSplashThenGo = function (href, message) {
+        if (isSplashNavigating) return;
+        isSplashNavigating = true;
+
+        const splashText = splashOverlay.querySelector('.nav-splash-text');
+        if (splashText) splashText.textContent = message;
+
+        splashOverlay.classList.add('active');
+        splashOverlay.setAttribute('aria-hidden', 'false');
+
+        setTimeout(function () {
+          window.location.href = href;
+        }, 1000);
+      };
+
+      const cards = document.querySelectorAll('.overview .tile[href]');
+      if (!cards.length) return;
+
+      cards.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          if (link.target && link.target !== '_self') return;
+
+          const rawHref = link.getAttribute('href');
+          if (!rawHref) return;
+
+          const normalized = rawHref.split('/').pop().split('#')[0];
+          const splashMessage = splashCopyByPath[normalized];
+          if (!splashMessage) return;
+
+          const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+          if (normalized === currentPage) return;
+
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          showNavSplashThenGo(link.href, splashMessage);
+        }, true);
+      });
+    })();
+  </script>
   <script>
     //  (function(){
     //   const btn = document.getElementById('download-resume');
