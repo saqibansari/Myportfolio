@@ -79,7 +79,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="home-main">
     <section id="landing" class="landing">
       <div class="container hero">
         <div class="hero-content">
@@ -87,7 +87,7 @@
           <p class="subtitle">I build interfaces, write about design, and help teams ship better products.</p>
           <div class="hero-actions">
             <a class="btn primary" href="portfolio.html">View Portfolio</a>
-            <a class="btn ghost" href="#contact">Get in touch</a>
+            <a class="btn ghost" style="margin-left: 10px;" href="#contact">Get in touch</a>
           </div>
         </div>
         <div class="hero-image" aria-hidden>
@@ -98,7 +98,7 @@
 
     <section id="overview" class="section overview">
       <div class="container">
-        <div class="section-header" style="margin:0 auto 3rem;">
+        <div class="section-header">
           <!-- <span class="section-eyebrow">Explore this site</span> -->
           <h2>Explore the site</h2>
           <p class="muted">Jump into the main areas to see the career path, selected portfolio work, articles, and a short bio.</p>
@@ -134,7 +134,7 @@
   
     <section id="about" class="section about" >
       <div class="container">
-        <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+        <div class="section-header centered">
           <h2>About Me</h2>
           <p class="muted">Designing meaningful experiences with strategic vision and hands-on expertise.</p>
         </div>
@@ -195,14 +195,14 @@
 
     <div class="section-divider"></div>
 
-    <section id="certifications" class="section certifications" style="padding-top:0;">
+    <section id="certifications" class="section certifications">
       <div class="container">
         <div class="certifications-intro">
           <h2>Certifications</h2>
           <p class="muted">Selected UX, usability, and digital experience certifications.</p>
           <p class="certifications-note">Click any card to preview the certificate.</p>
         </div>
-        <div class="tile-grid cert-grid-compact">
+        <div class="tile-grid cert-grid-compact is-collapsed" id="cert-grid">
           <div class="cert-card cert-card-clickable" id="cert-card-1" tabindex="0" data-cert-src="certificates/IDF_Dynamic_User_Experience_Design_and_Usability.jpg" role="button" aria-label="View certificate image">
             <div class="cert-card-content">
               <h3>Dynamic User Experience - Design & Usability</h3>
@@ -323,8 +323,7 @@
               <p>LinkedIn</p>
             </div>
           </div>
-          
-          
+          <button id="cert-show-all" class="cert-show-all-card" type="button" aria-controls="cert-grid" aria-expanded="false">Show all</button>
         </div>
       </div>
     </section>
@@ -341,9 +340,9 @@
 
     <div class="section-divider"></div>
 
-      <section id="quotes" class="section quotes" style="padding-top:0;" >
+      <section id="quotes" class="section quotes" >
       <div class="container">
-        <div class="section-header" style="text-align: center;">
+        <div class="section-header centered">
           <h2>My Motivation</h2>
           <p class="muted">Inspiration from designers and thinkers who shaped the way we build meaningful experiences.</p>
         </div>
@@ -366,9 +365,9 @@
 
     <div class="section-divider"></div>
 
-    <section id="clients" class="section clients" style="padding-top:0;">
+    <section id="clients" class="section clients">
       <div class="container">
-        <div class="section-header" style="text-align: center;">
+        <div class="section-header centered">
           <h2>Clients I worked with</h2>
           <p class="muted">Brands and organizations I collaborated with across product and experience design projects.</p>
         </div>
@@ -503,6 +502,28 @@
           e.stopImmediatePropagation();
           showNavSplashThenGo(link.href, splashMessage);
         }, true);
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      const certGrid = document.getElementById('cert-grid');
+      const certShowAll = document.getElementById('cert-show-all');
+      if (!certGrid || !certShowAll || window.__certToggleBound) return;
+      window.__certToggleBound = true;
+
+      const setCertToggleState = function (expanded) {
+        certGrid.classList.toggle('is-collapsed', !expanded);
+        certShowAll.classList.toggle('is-expanded', expanded);
+        certShowAll.textContent = expanded ? 'Show less' : 'Show all';
+        certShowAll.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      };
+
+      setCertToggleState(!certGrid.classList.contains('is-collapsed'));
+
+      certShowAll.addEventListener('click', function () {
+        const isCollapsed = certGrid.classList.contains('is-collapsed');
+        setCertToggleState(isCollapsed);
       });
     })();
   </script>

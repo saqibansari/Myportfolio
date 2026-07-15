@@ -283,6 +283,26 @@
     document.addEventListener('keydown', onCertKeydown);
   };
 
+  const certGrid = document.getElementById('cert-grid');
+  const certShowAll = document.getElementById('cert-show-all');
+  if(certGrid && certShowAll && !window.__certToggleBound){
+    window.__certToggleBound = true;
+
+    const setCertToggleState = expanded => {
+      certGrid.classList.toggle('is-collapsed', !expanded);
+      certShowAll.classList.toggle('is-expanded', expanded);
+      certShowAll.textContent = expanded ? 'Show less' : 'Show all';
+      certShowAll.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    };
+
+    setCertToggleState(!certGrid.classList.contains('is-collapsed'));
+
+    certShowAll.addEventListener('click', () => {
+      const isCollapsed = certGrid.classList.contains('is-collapsed');
+      setCertToggleState(isCollapsed);
+    });
+  }
+
   certCard1?.addEventListener('click', () => {
     const src = certCard1.dataset.certSrc;
     const title = certCard1.dataset.certTitle;
