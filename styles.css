@@ -82,8 +82,9 @@ html,body{height:100%;margin:0;background:linear-gradient(180deg,#071021 0%, #0f
 h2{font-family:'Space Grotesk',sans-serif;margin:0 0 .5rem;letter-spacing:-0.02em;line-height:1.1}
 .muted{color:var(--muted)}
 
-.company-tab-group{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.25rem 0 .5rem}
+.company-tab-group{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin:1.25rem 0 .5rem}
 .company-tab{display:inline-flex;align-items:center;justify-content:center;padding:.55rem 1.7rem;border-radius:999px;text-decoration:none;color:#e6eef6;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);font-weight:600;transition:transform .2s ease,background .2s ease,border-color .2s ease}
+.company-tab-date{margin-left:.45rem;font-size:.82em;font-style:italic;color:rgba(230,238,246,0.56);font-weight:500}
 .company-tab:hover{transform:translateY(-1px);background:rgba(124,92,255,0.2);border-color:rgba(124,92,255,0.45)}
 
 .overview .container{display:block}

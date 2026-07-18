@@ -15,9 +15,9 @@
 
   // nav splash transition for key sections
   const splashCopyByPath = {
-    'work-experience.html': 'Building timeline',
-    'portfolio.html': 'Loading artwork',
-    'articles.html': 'Loading thoughts'
+    'work-experience.html': 'Building timeline...',
+    'portfolio.html': 'Loading artwork...',
+    'articles.html': 'Loading thoughts...'
   };
 
   const splashOverlay = document.createElement('div');
