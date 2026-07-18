@@ -96,6 +96,119 @@
     });
   });
 
+  // portfolio scroll-to-top after 50% project scroll
+  const portfolioPage = document.querySelector('.portfolio-page');
+  const portfolioScrollTopBtn = document.querySelector('.portfolio-scroll-top');
+  if(portfolioPage && portfolioScrollTopBtn){
+    let ticking = false;
+
+    const setScrollTopVisibility = ()=>{
+      const activeProject = portfolioPage.querySelector('.article.active');
+      if(!activeProject){
+        portfolioScrollTopBtn.classList.remove('is-visible');
+        return;
+      }
+
+      const projectTop = activeProject.getBoundingClientRect().top + window.scrollY;
+      const headerOffset = 110;
+      const progressStart = projectTop - headerOffset;
+      const projectHeight = Math.max(activeProject.offsetHeight, 1);
+      const progress = (window.scrollY - progressStart) / projectHeight;
+
+      portfolioScrollTopBtn.classList.toggle('is-visible', progress >= 0.5);
+    };
+
+    const onScrollOrResize = ()=>{
+      if(ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(()=>{
+        setScrollTopVisibility();
+        ticking = false;
+      });
+    };
+
+    portfolioScrollTopBtn.addEventListener('click', ()=>{
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', onScrollOrResize, { passive: true });
+    window.addEventListener('resize', onScrollOrResize);
+    window.addEventListener('load', setScrollTopVisibility);
+    setScrollTopVisibility();
+  }
+
+  // articles scroll-to-top after 50% article scroll
+  const articlesPage = document.querySelector('body .container.articles');
+  const articlesScrollTopBtn = document.querySelector('.articles-scroll-top');
+  if(articlesPage && articlesScrollTopBtn && !document.querySelector('.portfolio-page')){
+    let ticking = false;
+
+    const setArticlesScrollTopVisibility = ()=>{
+      const activeArticle = articlesPage.querySelector('.article.active');
+      if(!activeArticle){
+        articlesScrollTopBtn.classList.remove('is-visible');
+        return;
+      }
+
+      const articleTop = activeArticle.getBoundingClientRect().top + window.scrollY;
+      const headerOffset = 110;
+      const progressStart = articleTop - headerOffset;
+      const articleHeight = Math.max(activeArticle.offsetHeight, 1);
+      const progress = (window.scrollY - progressStart) / articleHeight;
+
+      articlesScrollTopBtn.classList.toggle('is-visible', progress >= 0.5);
+    };
+
+    const onArticlesScrollOrResize = ()=>{
+      if(ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(()=>{
+        setArticlesScrollTopVisibility();
+        ticking = false;
+      });
+    };
+
+    articlesScrollTopBtn.addEventListener('click', ()=>{
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', onArticlesScrollOrResize, { passive: true });
+    window.addEventListener('resize', onArticlesScrollOrResize);
+    window.addEventListener('load', setArticlesScrollTopVisibility);
+    setArticlesScrollTopVisibility();
+  }
+
+  // index scroll-to-top after 50% page scroll
+  const homeMain = document.querySelector('.home-main');
+  const indexScrollTopBtn = document.querySelector('.index-scroll-top');
+  if(homeMain && indexScrollTopBtn){
+    let ticking = false;
+
+    const setIndexScrollTopVisibility = ()=>{
+      const scrollableHeight = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+      const progress = window.scrollY / scrollableHeight;
+      indexScrollTopBtn.classList.toggle('is-visible', progress >= 0.5);
+    };
+
+    const onIndexScrollOrResize = ()=>{
+      if(ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(()=>{
+        setIndexScrollTopVisibility();
+        ticking = false;
+      });
+    };
+
+    indexScrollTopBtn.addEventListener('click', ()=>{
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('scroll', onIndexScrollOrResize, { passive: true });
+    window.addEventListener('resize', onIndexScrollOrResize);
+    window.addEventListener('load', setIndexScrollTopVisibility);
+    setIndexScrollTopVisibility();
+  }
+
   // fullscreen image gallery overlay
   const galleryOverlay = document.querySelector('.gallery-overlay');
   const galleryImage = galleryOverlay?.querySelector('.gallery-image');
