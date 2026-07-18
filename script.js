@@ -36,7 +36,7 @@
     splashOverlay.setAttribute('aria-hidden', 'false');
     setTimeout(() => {
       window.location.href = href;
-    }, 1000);
+    }, 500);
   };
   window.__showNavSplashThenGo = showNavSplashThenGo;
 
