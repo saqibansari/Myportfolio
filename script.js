@@ -757,7 +757,7 @@
       }
     });
   },{threshold:0.12});
-  document.querySelectorAll('h2, .card, .article, .about-image, .hero-content, .timeline li').forEach(n=>{
+  document.querySelectorAll('h2, .card, .article, .about-image, .hero-content, .timeline li, .tile, .highlight-card, .quote-card, .detail-item, .contact-card').forEach(n=>{
     n.classList.add('reveal'); io.observe(n);
   });
 
@@ -785,4 +785,18 @@
     if(nav.style.display === 'flex') nav.style.display = '';
     else nav.style.display = 'flex';
   });
+
+  // 3D mouse-tracking tilt for cards
+  if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.querySelectorAll('.tile, .highlight-card, .contact-card, .quote-card').forEach(el=>{
+      const deg = el.classList.contains('tile') ? 7 : 11;
+      el.addEventListener('mousemove', e=>{
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        el.style.transform = `perspective(700px) rotateX(${(-y*deg).toFixed(2)}deg) rotateY(${(x*deg).toFixed(2)}deg) translateZ(8px) scale(1.018)`;
+      });
+      el.addEventListener('mouseleave', ()=>{ el.style.transform = ''; });
+    });
+  }
 })();
