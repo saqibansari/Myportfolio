@@ -463,3 +463,56 @@ h2{font-family:'Space Grotesk',sans-serif;margin:0 0 .5rem;letter-spacing:-0.02e
 @media(max-width:900px){
   .landing::after{display:none}
 }
+
+/* ══ 3D IMMERSIVE LAYER ══════════════════════════════════════════════════════ */
+
+/* cursor spotlight that tracks mouse across the hero */
+.landing-spotlight{position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:radial-gradient(650px circle at var(--mx,50%) var(--my,50%),
+    rgba(124,92,255,0.14),rgba(0,212,255,0.07) 42%,transparent 68%);
+  opacity:0;transition:opacity .45s ease}
+.landing:hover .landing-spotlight{opacity:1}
+
+/* canvas particle-network layer */
+.landing-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.72}
+
+/* 2D park walk scene */
+.park-scene-wrapper{width:100%;border-radius:16px;overflow:hidden;background:#05101f;border:1px solid rgba(255,255,255,0.07);box-shadow:0 20px 56px rgba(0,0,0,0.45);margin-top:.25rem}
+.park-canvas{display:block;width:100%;height:auto}
+
+/* smooth tilt reset for cert cards */
+.cert-card-clickable{transition:transform .12s ease-out,background .25s ease,border-color .25s ease}
+
+/* deep-glow on highlight cards */
+.highlight-card{transition:transform .3s ease,background .25s ease,border-color .3s ease,box-shadow .3s ease}
+
+/* z-depth on the hero container for mouse-tracking perspective */
+.hero{transform-style:preserve-3d;transition:transform .12s cubic-bezier(.17,.67,.3,1)}
+
+/* depth shimmer ring on about profile pic */
+.about-image-wrapper img{animation:photoDepth 8s ease-in-out infinite}
+@keyframes photoDepth{
+  0%,100%{box-shadow:0 28px 64px rgba(0,0,0,0.48),-16px 0 38px rgba(124,92,255,0.16),16px 0 38px rgba(0,212,255,0.1),inset 0 0 0 1px rgba(255,255,255,0.07)}
+  50%{box-shadow:0 36px 80px rgba(0,0,0,0.56),-22px 0 52px rgba(124,92,255,0.26),22px 0 52px rgba(0,212,255,0.18),inset 0 0 0 1px rgba(255,255,255,0.12)}
+}
+
+/* floating depth on orbs: add subtle Z-axis pulse */
+.parallax-orb.orb-a{animation:orbFloat 16s ease-in-out infinite,orbScaleA 9s ease-in-out infinite}
+.parallax-orb.orb-b{animation:orbFloat 20s ease-in-out infinite reverse,orbScaleB 11s ease-in-out infinite}
+@keyframes orbScaleA{0%,100%{filter:blur(72px) brightness(1)}50%{filter:blur(54px) brightness(1.3)}}
+@keyframes orbScaleB{0%,100%{filter:blur(60px) brightness(1)}50%{filter:blur(44px) brightness(1.25)}}
+
+/* scanline shimmer over hero for depth texture */
+.landing::before{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.03) 3px,rgba(0,0,0,0.03) 4px);
+  opacity:.45}
+
+@media(prefers-reduced-motion:reduce){
+  .about-image-wrapper img{animation:none}
+  .landing-canvas{display:none}
+  .landing-spotlight{display:none}
+  .hero{transform:none!important;transition:none}
+}
+@media(max-width:900px){
+  .landing-spotlight{display:none}
+}
